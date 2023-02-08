@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"example/web-service-gin/helpers"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -46,6 +47,6 @@ func TestDifference(t *testing.T) {
 		"added":   {"127.0.0.1", "43.135.157.133", "154.222.226.110"},
 		"removed": {"124.128.223.82", "77.68.26.238"},
 	}
-	got := findDifferences(old, new)
+	got := helpers.FindDifferences(old, new)
 	assert.Equal(t, expected, got)
 }
