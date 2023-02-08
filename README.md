@@ -52,7 +52,7 @@ You can use terminal and [Curl](https://curl.se/) to perform requests following 
  ```bash
     $ curl http://localhost:8080/count
  ```
- - POST `/contains"`
+ - POST `/contains`
  Returns bool value (true/false) if ip address exists
  ```bash
     $ curl http://localhost:8080/contains -H 'Content-Type: application/json' -d '{"ip_address": "74.82.204.124"}'
