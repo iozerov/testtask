@@ -3,7 +3,6 @@ package main
 import (
 	"example/web-service-gin/addresses"
 	"example/web-service-gin/helpers"
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -58,7 +57,6 @@ func filter(c *gin.Context) {
 }
 
 func count(c *gin.Context) {
-	fmt.Println(ipAddresses.List)
 	c.IndentedJSON(http.StatusOK, len(ipAddresses.List))
 }
 
