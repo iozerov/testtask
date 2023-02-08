@@ -21,8 +21,12 @@ $ go test -v
 --- PASS: TestContains (0.00s)
 === RUN   TestDifference
 --- PASS: TestDifference (0.00s)
+=== RUN   TestFilter
+--- PASS: TestFilter (0.00s)
+=== RUN   TestDelete
+--- PASS: TestDelete (0.00s)
 PASS
-ok      example/web-service-gin 0.008s
+ok      example/web-service-gin 0.009s
 ```
 
 ### Endpoints
