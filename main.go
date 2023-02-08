@@ -68,10 +68,10 @@ func contains(c *gin.Context) {
 		return
 	}
 	contains := ipAddresses.Contains(body.IpAddress)
-	c.JSON(http.StatusAccepted, contains)
+	c.JSON(http.StatusOK, contains)
 }
 
 func delete(c *gin.Context) {
 	ipAddresses = ipAddresses.Delete()
-	c.JSON(http.StatusAccepted, ipAddresses.List)
+	c.JSON(http.StatusOK, ipAddresses.List)
 }

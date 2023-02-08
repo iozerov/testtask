@@ -28,7 +28,7 @@ func ParseData(link string) []string {
 }
 
 func FindDifferences(oldSlice []string, newSlice []string) map[string][]string {
-	diffData := make(map[string][]string)
+	diffData := map[string][]string{"added": {}, "removed": {}}
 	// Loop two times, first to find oldSlice strings not in newSlice,
 	// second loop to find newSlice strings not in oldSlice
 	for i := 0; i < 2; i++ {
