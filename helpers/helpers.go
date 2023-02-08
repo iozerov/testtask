@@ -56,3 +56,13 @@ func FindDifferences(oldSlice []string, newSlice []string) map[string][]string {
 	}
 	return diffData
 }
+
+func DeleteEmpty(s []string) []string {
+	var slice []string
+	for _, str := range s {
+		if str != "" {
+			slice = append(slice, str)
+		}
+	}
+	return slice
+}

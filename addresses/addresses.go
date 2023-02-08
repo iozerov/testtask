@@ -1,6 +1,7 @@
 package addresses
 
 import (
+	"example/web-service-gin/helpers"
 	"strings"
 )
 
@@ -9,7 +10,7 @@ type Addresses struct {
 }
 
 func New(dataList []string) Addresses {
-	addresses := Addresses{dataList}
+	addresses := Addresses{helpers.DeleteEmpty(dataList)}
 	return addresses
 }
 
